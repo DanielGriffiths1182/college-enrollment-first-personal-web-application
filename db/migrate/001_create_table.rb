@@ -1,4 +1,3 @@
-require_relative 'environment'
 require 'active_record'
 
 class CreateTable < ActiveRecord::Migration[5.0]
