@@ -4,7 +4,7 @@ var $freshAvg = $('#fresh-avg')
 $fresh.click(function(){
   $.ajax({
     method: 'GET',
-    url: 'http://localhost:9393/api/enrollment/freshman/avg',
+    url: '/api/enrollment/freshman/avg',
     data: {},
     dataType: 'json'
   }).done(function(freshAvg) {
@@ -22,7 +22,7 @@ var $sophAvg = $('#soph-avg')
 $soph.click(function(){
   $.ajax({
     method: 'GET',
-    url: 'http://localhost:9393/api/enrollment/sophmore/avg',
+    url: '/api/enrollment/sophmore/avg',
     data: {},
     dataType: 'json'
   }).done(function(sophAvg) {
@@ -40,7 +40,7 @@ var $junAvg = $('#jun-avg')
 $jun.click(function(){
   $.ajax({
     method: 'GET',
-    url: 'http://localhost:9393/api/enrollment/junior/avg',
+    url: '/api/enrollment/junior/avg',
     data: {},
     dataType: 'json'
   }).done(function(junAvg) {
@@ -59,7 +59,7 @@ var $senAvg =$('#sen-avg')
 $sen.click(function(){
   $.ajax({
     method: 'GET',
-    url: 'http://localhost:9393/api/enrollment/senior/avg',
+    url: '/api/enrollment/senior/avg',
     data: {},
     dataType: 'json'
   }).done(function(senAvg) {
@@ -78,7 +78,7 @@ var $gradAvg = $('#grad-avg')
 $grad.click(function(){
   $.ajax({
     method: 'GET',
-    url: 'http://localhost:9393/api/enrollment/graduate/avg',
+    url: '/api/enrollment/graduate/avg',
     data: {},
     dataType: 'json'
   }).done(function(gradAvg) {
@@ -96,7 +96,7 @@ var $totalAvg = $('#total-avg')
 $total.click(function(){
   $.ajax({
     method: 'GET',
-    url: 'http://localhost:9393/api/enrollment/total/avg',
+    url: '/api/enrollment/total/avg',
     data: {},
     dataType: 'json'
   }).done(function(totalAvg) {
@@ -114,7 +114,7 @@ $total.click(function(){
 // $full.click(function(){
 //   $.ajax({
 //     method: 'GET',
-//     url: 'http://localhost:9393/api/full/table',
+//     url: '/api/full/table',
 //     dataType: 'json'
 //   }).done(function(fullAvg) {
 //     console.log(fullAvg)
