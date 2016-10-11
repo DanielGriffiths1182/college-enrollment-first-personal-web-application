@@ -1,71 +1,126 @@
 var $fresh = $('#fresh');
+var $freshAvg = $('#fresh-avg')
 
+$fresh.click(function(){
   $.ajax({
     method: 'GET',
     url: 'http://localhost:9393/api/enrollment/freshman/avg',
     data: {},
     dataType: 'json'
-  }).done(function(fresh) {
-    console.log(fresh);
-    });
+  }).done(function(freshAvg) {
+    console.log(freshAvg)
 
-var $soph_avg = $('soph_avg');
+    $fresh.fadeOut(function() {
+      $freshAvg.text(parseFloat(freshAvg).toFixed(2))
+    })
+  });
+})
 
+var $soph = $('#soph');
+var $sophAvg = $('#soph-avg')
+
+$soph.click(function(){
   $.ajax({
     method: 'GET',
     url: 'http://localhost:9393/api/enrollment/sophmore/avg',
     data: {},
     dataType: 'json'
-  }).done(function(soph_avg) {
-    console.log(soph_avg);
-    });
+  }).done(function(sophAvg) {
+    console.log(sophAvg)
 
-var $jun_avg = $('jun_avg');
+    $soph.fadeOut(function() {
+      $sophAvg.text(parseFloat(sophAvg).toFixed(2))
+    })
+  });
+})
 
+var $jun = $('#jun');
+var $junAvg = $('#jun-avg')
+
+$jun.click(function(){
   $.ajax({
     method: 'GET',
     url: 'http://localhost:9393/api/enrollment/junior/avg',
     data: {},
     dataType: 'json'
-  }).done(function(jun_avg) {
-    console.log(jun_avg);
-    });
+  }).done(function(junAvg) {
+    console.log(junAvg)
 
-var $sen_avg = $('sen_avg');
+
+    $jun.fadeOut(function() {
+      $junAvg.text(parseFloat(junAvg).toFixed(2))
+    })
+  });
+})
+
+var $sen = $('#sen');
+var $senAvg =$('#sen-avg')
+
+$sen.click(function(){
   $.ajax({
     method: 'GET',
     url: 'http://localhost:9393/api/enrollment/senior/avg',
     data: {},
     dataType: 'json'
-  }).done(function(sen_avg) {
-    console.log(sen_avg);
-    });
+  }).done(function(senAvg) {
+    console.log(senAvg)
 
-var $grad_avg = $('grad_avg');
+
+    $sen.fadeOut(function() {
+      $senAvg.text(parseFloat(senAvg).toFixed(2))
+    })
+  });
+})
+
+var $grad = $('#grad');
+var $gradAvg = $('#grad-avg')
+
+$grad.click(function(){
   $.ajax({
     method: 'GET',
     url: 'http://localhost:9393/api/enrollment/graduate/avg',
     data: {},
     dataType: 'json'
-  }).done(function(grad_avg) {
-    console.log(grad_avg);
-    });
+  }).done(function(gradAvg) {
+    console.log(gradAvg)
 
-var $total_avg = $('total_avg');
+    $grad.fadeOut(function() {
+      $gradAvg.text(parseFloat(gradAvg).toFixed(2))
+    })
+  });
+})
+
+var $total = $('#total');
+var $totalAvg = $('#total-avg')
+
+$total.click(function(){
   $.ajax({
     method: 'GET',
     url: 'http://localhost:9393/api/enrollment/total/avg',
     data: {},
     dataType: 'json'
-  }).done(function(total_avg) {
-    console.log(total_avg);
-    });
+  }).done(function(totalAvg) {
+    console.log(totalAvg)
 
-var $full = $('full');
-  $.ajax({
-    method: 'GET',
-    url: 'http://localhost:9393/api/full/table',
-    dataType: 'json'
-  }).done(function(full) {
-    console.log(full);
-    });
+    $total.fadeOut(function() {
+      $totalAvg.text(parseFloat(totalAvg).toFixed(2))
+    })
+  });
+})
+
+// var $full = $('#full');
+// var $fullAvg = $('#full-avg')
+//
+// $full.click(function(){
+//   $.ajax({
+//     method: 'GET',
+//     url: 'http://localhost:9393/api/full/table',
+//     dataType: 'json'
+//   }).done(function(fullAvg) {
+//     console.log(fullAvg)
+//
+//     $full.fadeOut(function() {
+//       $fullAvg.text(parseFloat(fullAvg).toFixed(2))
+//     })
+//   });
+// })

@@ -3,18 +3,46 @@
   <head>
     <meta charset="utf-8">
     <title>jQuery Ajax for Sinatra API</title>
+    <link rel="stylesheet" href="enrollment.css">
   </head>
   <body>
-    <h1>Enrollment Data for a Wisconsin College</h1>
+    <div class="title">
+    <h1>Enrollment Data for a Random College in Wisconsin</h1>
+    </div>
+    <div class='subtitle'>
     <h2>2000, 2001, 2002</h2>
-    <ul id="fresh">
-      <button onclick="function()">Freshman Class Average Enrollment</button>
-      <button onclick="function()">Sophomore Class Average Enrollment</button>
-      <button onclick="function()">Junior Class Average Enrollment</button>
-      <button onclick="function()">Senior Class Average Enrollment</button>
-      <button onclick="function()">Average Student Graduation Rate</button>
-      <button onclick="function()">Average Total Attending Students</button>
-      <button onclick="function()">Full Table of Enrollment Records Ordered by Year</button>
+    </div>
+    <div class='p'>
+    <p>This page gives the user information about the rates of enrollment
+      at a Wisconsin college. The user can find the average enrollment rate of any
+      particular grade year. The user can fin the average graduation rate over the period of three years
+    as well as the average total students in attendance.</p>
+    </div>
+    <ul>
+    <div class='one'>
+      <button id="fresh">Freshman Class Average Enrollment</button>
+      <div id="fresh-avg"></div>
+    </div>
+      <div class='two'>
+        <button id="soph">Sophomore Class Average Enrollment</button>
+        <div id="soph-avg"></div>
+      </div>
+      <div class='three'>
+        <button id="jun">Junior Class Average Enrollment</button>
+        <div id="jun-avg"></div>
+      </div>
+      <div class='four'>
+        <button id="sen">Senior Class Average Enrollment</button>
+        <div id="sen-avg"></div>
+      </div>
+      <div class='five'>
+        <button id="grad">Average Student Graduation Rate</button>
+        <div id="grad-avg"></div>
+      </div>
+      <div class='six'>
+        <button id="total">Average Total Attending Students</button>
+        <div id="total-avg"></div>
+      </div>
     </ul>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="main.js"></script>
