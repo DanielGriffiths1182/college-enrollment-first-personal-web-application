@@ -1,8 +1,9 @@
 require 'sinatra'
 require 'active_record'
 require_relative 'wisconsin_enrolment'
-require_relative 'environment'
 require "sinatra/cross_origin"
+
+ActiveRecord::Base.establish_connection(ENV['DATABASE_URL'])
 
 register Sinatra::CrossOrigin
 
